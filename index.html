@@ -10,8 +10,8 @@
   <script>
     // Trigger the Zapier webhook
     const params = new URLSearchParams(window.location.search);
-    const task_gid = params.get("user_id");
-    const status = params.get("token");
+    const task_gid = params.get("task_gid");
+    const status = params.get("status");
     fetch('https://hooks.zapier.com/hooks/catch/22943652/27m4pbg/?task_gid=${task_gid}&status=${status}', {
       method: 'POST',
       headers: {
