@@ -18,7 +18,7 @@
       }
       const task_gid = data['task_gid']
       const status = data['status']
-    webhookURL = "https://hooks.zapier.com/hooks/catch/22943652/27m4pbg/?task_gid=" + "?" + task_gid + "&status=" + status
+    webhookURL = "https://hooks.zapier.com/hooks/catch/22943652/27m4pbg/?task_gid=" + task_gid + "&status=" + status
     fetch(webhookURL, {
       method: 'POST',
       headers: {
