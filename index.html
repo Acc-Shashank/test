@@ -18,9 +18,8 @@
       }
       const task_gid = data['task_gid']
       const status = data['status']
-    const params = new URLSearchParams(window.location.search);
-    const zapierWebhookURL = "https://hooks.zapier.com/hooks/catch/22943652/27m4pbg/" + "?" + params.toString();
-    fetch(zapierWebhookURL, {
+    webhookURL = "https://hooks.zapier.com/hooks/catch/22943652/27m4pbg/?task_gid=" + "?" + task_gid + "&status=" + status
+    fetch(webhookURL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
